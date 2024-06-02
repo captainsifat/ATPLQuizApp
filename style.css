@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Poppins", sans-serif;
+    
+}
+body{
+    background-color: #f1f1f1;
+}
+.MyQuizApp{
+width:320px;
+height:580px;
+position:absolute;
+top:50%;
+left:50%;
+background-color: #fff;
+box-shadow: rgb(0 0 0  / 10%)0px 10px 50px;
+transform:translate(-50%, -50%);
+border-radius: 48px;
+}
+.img img{
+    width:100%;
+    margin-top: .5px;
+}
+.text{
+    width:90%;
+    margin:auto;
+}
+.text h3{
+    margin-top: 20px;
+}
+.MyBtn{
+    width:60%;
+    margin-top: 97px;
+    margin-left: 176px !important;
+
+}
+.MyBtn button{
+    font-size: 20px;
+    font-weight: 600px;
+    background-color: tomato;
+    border:none;
+    outline:none;
+    color:#fff;
+    padding:6px 25px;
+    cursor:pointer;
+    border-radius:57px 0 51px 0 ;
+    transition: 0.2s ease-in-out;
+}
+.MyBtn button:hover{
+background-color: rgb(29,194,194);
+}
+.RuleBox{
+    
+        width:320px;
+        height:580px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        background-color: #fff;
+        box-shadow: rgb(0 0 0  / 10%)0px 10px 50px;
+        transform:translate(-50%, -50%);
+        border-radius: 48px;
+        
+}
+.RulesTitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid lightgray;
+    padding:5px;
+}
+
+.RulesList{
+    width:80%;
+    margin:auto;
+}
+
+ol li{
+
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 25px; 
+}
+.buttons button{
+    font-size: 20px;
+    font-weight: 600px;
+    background-color: tomato;
+    border:none;
+    outline:none;
+    color:#fff;
+    padding:6px 25px;
+    cursor:pointer;
+    transition: 0.2s ease-in-out;
+    margin-top: 8px;
+
+}
+.ExitButton{
+    border-radius:0 47px 0 46px ;
+}
+.ExitButton:hover{
+    background-color: red;
+}
+.ContinueButton{
+    border-radius:57px 0 51px 0 ;
+    margin-left: 43px;
+}
+
+.ContinueButton:hover{
+    background-color: rgb(29,194,194);
+}
