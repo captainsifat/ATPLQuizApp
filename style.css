@@ -50,6 +50,12 @@ border-radius: 48px;
 .MyBtn button:hover{
 background-color: rgb(29,194,194);
 }
+.RuleBox.activeInfo{
+    opacity:1;
+    z-index:5;
+    pointer-events:auto;
+    transform:translate(-50%, -50%)scale(1);
+}
 .RuleBox{
     
         width:320px;
@@ -62,9 +68,10 @@ background-color: rgb(29,194,194);
         transform:translate(-50%, -50%);
         border-radius: 48px;
         opacity:0;
-        display:none;
+        pointer-events:none;
         
 }
+
 .RulesTitle{
     text-align: center;
     font-size: 20px;
@@ -111,7 +118,12 @@ ol li{
 .ContinueButton:hover{
     background-color: rgb(29,194,194);
 }
-
+.question.activeQuiz{
+    opacity:1;
+    z-index:5;
+    pointer-events:auto;
+    transform:translate(-50%, -50%)scale(1);
+}
 
 .question{
     width:320px;
@@ -123,7 +135,10 @@ ol li{
     box-shadow: rgb(0 0 0  / 10%)0px 10px 50px;
     transform:translate(-50%, -50%);
     border-radius: 48px;
+    opacity:0;
+    pointer-events: none;
 }
+
 .questionHeader{
     position: relative;
     z-index:2;
