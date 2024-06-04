@@ -37,12 +37,12 @@ border-radius: 48px;
 }
 .MyBtn button{
     font-size: 20px;
-    font-weight: 600px;
+    font-weight: 600;
     background-color: tomato;
     border:none;
     outline:none;
     color:#fff;
-    padding:6px 25px;
+    padding:6.1px 19px;
     cursor:pointer;
     border-radius:57px 0 51px 0 ;
     transition: 0.2s ease-in-out;
@@ -93,12 +93,12 @@ ol li{
 }
 .buttons button{
     font-size: 20px;
-    font-weight: 600px;
+    font-weight: 600;
     background-color: tomato;
     border:none;
     outline:none;
     color:#fff;
-    padding:6px 25px;
+    padding:6px 23px;
     cursor:pointer;
     transition: 0.2s ease-in-out;
     margin-top: 8px;
@@ -240,6 +240,7 @@ footer button{
     color:#f1f1f1;
     transition: all 0.3s ease;
     margin-top:-101px;
+    display: none;
 }
 footer .nextBtn:hover{
     background: rgb(29, 194, 194);
@@ -258,4 +259,11 @@ footer .nextBtn:hover{
 }
 .options.disabled{
     pointer-events: none;
+}
+.question header .time_Lines {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #007bff;
 }
