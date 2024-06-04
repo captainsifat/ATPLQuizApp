@@ -26,11 +26,58 @@ ContinueButton.onclick = () =>{
 
 const nextBtn=document.querySelector(".nextBtn");
 
+const result_box=document.querySelector(".result_box");
+const restart_quiz=document.querySelector(".buttons .restart1");
+const quit_quiz=document.querySelector(".buttons .quit");
+
+restart_quiz.onclick=()=>{
+    result_box.classList.remove("activeResult");
+    Questions.classList.add("activeQuiz");
+    showQuestion(0);
+    startTimer(15);
+    startTimerLine(0);
+
+    let que_count = 0;
+    let counter;
+    let timeValue=15;
+    let counterLine;
+    let widthValue=0;
+    let userScore=0;
+    
+    nextBtn.onclick=()=>{
+        if(que_count < questions.length-1){
+            que_count++;
+            showQuestion(que_count);
+            clearInterval(counter);
+            startTimer(timeValue);
+    
+            clearInterval(counterLine);
+            startTimerLine(widthValue);
+            nextBtn.style.display="none";
+        }
+        else{
+            console.log("You Have Completd Your Task 🥰");
+            showResultBox();
+        }
+    
+    }
+
+
+
+
+}
+
+
+quit_quiz.onclick=()=>{
+    window.location.reload();
+}
+
 let que_count = 0;
 let counter;
 let timeValue=15;
 let counterLine;
 let widthValue=0;
+let userScore=0;
 
 nextBtn.onclick=()=>{
     if(que_count < questions.length-1){
@@ -45,6 +92,7 @@ nextBtn.onclick=()=>{
     }
     else{
         console.log("You Have Completd Your Task 🥰");
+        showResultBox();
     }
 
 }
@@ -82,6 +130,8 @@ function optionSelected(answer){
     let alloptions = option_list.children.length;
 
     if(userAns == correctAns){
+        userScore +=1;
+        console.log(userScore);
         
     answer.classList.add("correct") 
     console.log("Ans is Correct");
@@ -110,6 +160,29 @@ function optionSelected(answer){
     nextBtn.style.display="block";
 
 }
+
+function showResultBox(){
+    RulesBox.classList.remove("activeInfo");
+    Questions.classList.remove("activeQuiz");
+    result_box.classList.add("activeResult");
+
+    const scoreText=document.querySelector(".score_text");
+    if(userScore >3){
+      let  scoreTag = '<span>Congratulations 👍 You Got <p>'+ userScore+'</p> Out Of <p>'+questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
+
+    else if(userScore >1){
+        let  scoreTag = '<span>Carry On 👌 You Got <p>'+ userScore+'</p> Out Of <p>'+questions.length +'</p></span>';
+          scoreText.innerHTML = scoreTag;
+      }
+
+      else{
+        let  scoreTag = '<span>I am sorry  You Got <p>'+ userScore+'</p> Out Of <p>'+questions.length +'</p></span>';
+          scoreText.innerHTML = scoreTag;
+      }
+}
+
 
 function startTimer(time){
     counter = setInterval(timer,1000);
