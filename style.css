@@ -112,11 +112,12 @@ ol li{
 }
 .ContinueButton{
     border-radius:57px 0 51px 0 ;
-    margin-left: 43px;
+    margin-left: 44px;
 }
 
 .ContinueButton:hover{
     background-color: rgb(29,194,194);
+    
 }
 .question.activeQuiz{
     opacity:1;
@@ -218,11 +219,14 @@ footer{
     align-items:center;
     justify-content: space-between;
     border-top: 1px solid lightgrey;
+    
 }
 .total_que{
-    padding-bottom: 10px;
-    padding-left: 30px;
+    padding-bottom: 105px;
+    padding-left: 40px;
+    font-size: 10px;
 }
+
 footer button{
     font-size: 20px;
     font-weight: 600;
@@ -235,8 +239,23 @@ footer button{
     cursor:pointer;
     color:#f1f1f1;
     transition: all 0.3s ease;
-    margin-top:0px;
+    margin-top:-101px;
 }
 footer .nextBtn:hover{
-    background-color: rgb(29, 194, 194);
+    background: rgb(29, 194, 194);
+}
+
+.options.correct{
+    color:#155724;
+    background:#d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.options.Incorrect{
+    color:#721724;
+    background:#f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.options.disabled{
+    pointer-events: none;
 }
